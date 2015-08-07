@@ -29,10 +29,10 @@ class BikesController < ApplicationController
     respond_to do |format|
       if @bike.save
         format.html { redirect_to @bike, notice: 'Bike was successfully created.' }
-        format.json { render :show, status: :created, location: @bike }
+        format.json { render json: @bike }
       else
         format.html { render :new }
-        format.json { render json: @bike.errors, status: :unprocessable_entity }
+        format.json { render json: @bike.errors.full_messages, status: :unprocessable_entity }
       end
     end
   end
@@ -43,10 +43,10 @@ class BikesController < ApplicationController
     respond_to do |format|
       if @bike.update(bike_params)
         format.html { redirect_to @bike, notice: 'Bike was successfully updated.' }
-        format.json { render :show, status: :ok, location: @bike }
+        format.json { render json: @bike }
       else
         format.html { render :edit }
-        format.json { render json: @bike.errors, status: :unprocessable_entity }
+        format.json { render json: @bike.errors.full_messages, status: :unprocessable_entity }
       end
     end
   end
