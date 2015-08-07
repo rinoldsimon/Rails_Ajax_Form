@@ -1,5 +1,3 @@
 == Rails-4-AJAX-Form
 
-Rails 4 AJAX Form Example
-
-Source code for the article on Wordpress ().
+Source code for the article on Wordpress (http://wp.me/p4Kz2l-4q).
