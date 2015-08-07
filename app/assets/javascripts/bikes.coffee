@@ -4,7 +4,7 @@ $(document).ready ->
     $bike_form = $(event.data)
     $error_container = $("#error_explanation", $bike_form)
     $error_container_ul = $("ul", $error_container)
-    $("<p>").html(xhr.responseJSON.title + " saved.").appendTo $bike_form
+    $("<p>").html(xhr.responseJSON.name + " saved.").appendTo $bike_form
     if $("li", $error_container_ul).length
       $("li", $error_container_ul).remove()
       $error_container.hide()
